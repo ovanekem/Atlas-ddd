@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="Atlas-DDD-EAR:ear">
+    <output-path>$PROJECT_DIR$/Atlas-DDD-EAR/target</output-path>
+    <root id="archive" name="atlas-ddd-ear.ear">
+      <element id="artifact" artifact-name="Atlas-DDD-EAR:ear exploded" />
+    </root>
+  </artifact>
+</component>
