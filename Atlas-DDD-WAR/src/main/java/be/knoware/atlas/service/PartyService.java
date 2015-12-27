@@ -21,6 +21,7 @@ public class PartyService {
     }
 
     public void addParty(Party party) {
+        partyRepository.save(party);
 
     }
 }

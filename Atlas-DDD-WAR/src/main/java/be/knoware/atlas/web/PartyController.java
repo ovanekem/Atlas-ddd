@@ -5,10 +5,7 @@ import be.knoware.atlas.service.PartyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -28,6 +25,12 @@ public class PartyController {
         List<Party> parties = partyService.fetchAllPartyFromDatabase();
         return parties;
 
+    }
+
+    @RequestMapping(value = "/party/add", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public String addParty(@RequestBody Party party) {
+        partyService.addParty(party);
+        return "success";
     }
 
 }
