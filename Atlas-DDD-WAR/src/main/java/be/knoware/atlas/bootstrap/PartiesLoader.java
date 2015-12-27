@@ -23,36 +23,41 @@ public class PartiesLoader implements ApplicationListener<ContextRefreshedEvent>
     private PartyRepository partyRepository;
 
     public static final Logger LOGGER = Logger.getLogger(PartyRepository.class);
+    private static boolean _isInitialized = false;
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
 
-        Party vicromis = new Party();
-        vicromis.setDenomination("Vicromis SPRL");
-        String string = "01/01/2012";
-        DateFormat format = new SimpleDateFormat("dd/MM/YYYY");
-        try {
-            Date vicromisStartDate = format.parse(string);
-            vicromis.setStartDate(vicromisStartDate);
-        } catch (ParseException pe) {
-            LOGGER.error("Cannot parse start date for Vicromis", pe);
+        if (!PartiesLoader._isInitialized) {
+            Party vicromis = new Party();
+            vicromis.setDenomination("Vicromis SPRL");
+            String string = "01/01/2012";
+            DateFormat format = new SimpleDateFormat("dd/MM/YYYY");
+            try {
+                Date vicromisStartDate = format.parse(string);
+                vicromis.setStartDate(vicromisStartDate);
+            } catch (ParseException pe) {
+                LOGGER.error("Cannot parse start date for Vicromis", pe);
+            }
+
+            partyRepository.save(vicromis);
+            LOGGER.info("Vicromis entity saved with ID=" + vicromis.getId());
+
+            Party knoware = new Party();
+            knoware.setDenomination("Knoware SA");
+            string = "01/01/1998";
+            format = new SimpleDateFormat("dd/MM/YYYY");
+            try {
+                Date knowareStartDate = format.parse(string);
+                knoware.setStartDate(knowareStartDate);
+            } catch (ParseException pe) {
+                LOGGER.error("Cannot parse start date for Knoware", pe);
+            }
+
+            partyRepository.save(knoware);
+            LOGGER.info("Knoware entity saved with ID=" + knoware.getId());
         }
+        PartiesLoader._isInitialized = true;
 
-        partyRepository.save(vicromis);
-        LOGGER.info("Vicromis entity saved with ID=" + vicromis.getId());
-
-        Party knoware = new Party();
-        knoware.setDenomination("Knoware SA");
-        string = "01/01/1998";
-        format = new SimpleDateFormat("dd/MM/YYYY");
-        try {
-            Date knowareStartDate = format.parse(string);
-            knoware.setStartDate(knowareStartDate);
-        } catch (ParseException pe) {
-            LOGGER.error("Cannot parse start date for Knoware", pe);
-        }
-
-        partyRepository.save(knoware);
-        LOGGER.info("Knoware entity saved with ID=" + knoware.getId());
     }
 }
