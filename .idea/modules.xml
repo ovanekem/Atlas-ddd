@@ -5,9 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD.iml" filepath="$PROJECT_DIR$/Atlas-DDD.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Docker/Atlas-DDD-Docker.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Docker/Atlas-DDD-Docker.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-EAR/Atlas-DDD-EAR.iml" filepath="$PROJECT_DIR$/Atlas-DDD-EAR/Atlas-DDD-EAR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Other-EAR/Atlas-DDD-Other-EAR.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Other-EAR/Atlas-DDD-Other-EAR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Other-WAR/Atlas-DDD-Other-WAR.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Other-WAR/Atlas-DDD-Other-WAR.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Party-Model/Atlas-DDD-Party-Model.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Party-Model/Atlas-DDD-Party-Model.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Party-Persist/atlas-ddd-party-persist.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Party-Persist/atlas-ddd-party-persist.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-WAR/atlas-ddd-war.iml" filepath="$PROJECT_DIR$/Atlas-DDD-WAR/atlas-ddd-war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Party-Persist/Atlas-DDD-Party-Persist.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Party-Persist/Atlas-DDD-Party-Persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-WAR/Atlas-DDD-WAR.iml" filepath="$PROJECT_DIR$/Atlas-DDD-WAR/Atlas-DDD-WAR.iml" />
     </modules>
   </component>
 </project>

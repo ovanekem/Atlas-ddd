@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="atlas-ddd-war:war">
+  <artifact type="war" name="Atlas-DDD-WAR:war">
     <output-path>$PROJECT_DIR$/Atlas-DDD-WAR/target</output-path>
     <root id="archive" name="atlas-ddd-war.war">
-      <element id="artifact" artifact-name="atlas-ddd-war:war exploded" />
+      <element id="artifact" artifact-name="Atlas-DDD-WAR:war exploded" />
     </root>
   </artifact>
 </component>

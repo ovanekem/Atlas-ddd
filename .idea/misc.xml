@@ -43,6 +43,8 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/Atlas-DDD-EAR" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/Atlas-DDD-Other-EAR" />
+    <file type="web" url="file://$PROJECT_DIR$/Atlas-DDD-Other-WAR" />
     <file type="web" url="file://$PROJECT_DIR$/Atlas-DDD-WAR" />
   </component>
   <component name="MavenProjectsManager">

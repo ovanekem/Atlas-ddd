@@ -8,7 +8,7 @@
       </element>
       <element id="dir-copy" path="$PROJECT_DIR$/Atlas-DDD-EAR/src/main/application" />
       <element id="archive" name="atlas-ddd-war-1.0-SNAPSHOT.war">
-        <element id="artifact" artifact-name="atlas-ddd-war:war exploded" />
+        <element id="artifact" artifact-name="Atlas-DDD-WAR:war exploded" />
       </element>
     </root>
   </artifact>

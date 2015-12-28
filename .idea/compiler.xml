@@ -23,7 +23,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Atlas-DDD-Party-Persis" />
-        <module name="Atlas-DDD-Party-Persist" />
       </profile>
       <profile default="false" name="Annotation profile for Atlas-DDD-WAR" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -67,14 +66,37 @@
         <processorPath useClasspath="true" />
         <module name="Atlas-DDD-Party-Model" />
       </profile>
+      <profile default="false" name="Annotation profile for Atlas-DDD-Other-EAR" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Atlas-DDD-Other-EAR" />
+      </profile>
+      <profile default="false" name="Annotation profile for Atlas-DDD-Other-WAR" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Atlas-DDD-Other-WAR" />
+      </profile>
+      <profile default="false" name="Annotation profile for Atlas-DDD-Party-Persist" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Atlas-DDD-Party-Persist" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Atlas-DDD" target="1.7" />
       <module name="Atlas-DDD-Docker" target="1.7" />
       <module name="Atlas-DDD-EAR" target="1.7" />
+      <module name="Atlas-DDD-Other-EAR" target="1.7" />
+      <module name="Atlas-DDD-Other-WAR" target="1.7" />
       <module name="Atlas-DDD-Party-Model" target="1.7" />
       <module name="Atlas-DDD-Party-Persis" target="1.5" />
-      <module name="Atlas-DDD-Party-Persist" target="1.5" />
+      <module name="Atlas-DDD-Party-Persist" target="1.7" />
       <module name="atlas-ddd-party-persist" target="1.7" />
       <module name="Atlas-DDD-WAR" target="1.7" />
       <module name="atlas-ddd-war" target="1.7" />
