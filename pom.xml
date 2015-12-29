@@ -12,10 +12,11 @@
         <module>Atlas-DDD-WAR</module>
         <module>Atlas-DDD-Party-Model</module>
         <module>Atlas-DDD-EAR</module>
-        <module>Atlas-DDD-Party-Persist</module>
+        <module>Atlas-DDD-Persist</module>
         <module>Atlas-DDD-Docker</module>
         <module>Atlas-DDD-Other-EAR</module>
         <module>Atlas-DDD-Other-WAR</module>
+        <module>Atlas-DDD-Communication-Model</module>
     </modules>
     <properties>
         <java.version>1.7</java.version>

@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>atlas-ddd-party-persist</artifactId>
+
+    <artifactId>atlas-ddd-persist</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>

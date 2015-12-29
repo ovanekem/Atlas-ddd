@@ -54,6 +54,11 @@
         <option value="$PROJECT_DIR$/Atlas-DDD-WAR/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Atlas-DDD-Communication-Persist/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />

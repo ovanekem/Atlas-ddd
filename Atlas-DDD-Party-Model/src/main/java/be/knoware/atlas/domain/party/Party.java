@@ -1,25 +1,29 @@
 package be.knoware.atlas.domain.party;
 
+import be.knoware.atlas.domain.communication.CommunicationPoint;
+
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by ovanekem on 22/12/15.
  */
 public class Party {
     private long id;
-    private Integer type;
     private String denomination;
     private Date startDate;
     private Date endDate;
-    private Address address;
 
-    public Address getAddress() {
-        return address;
+    public List<CommunicationPoint> getCommunicationPointList() {
+        return communicationPointList;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setCommunicationPointList(List<CommunicationPoint> communicationPointList) {
+        this.communicationPointList = communicationPointList;
     }
+
+    private List<CommunicationPoint> communicationPointList;
 
     public Party() {
     }
@@ -32,13 +36,6 @@ public class Party {
         this.id = id;
     }
 
-    public Integer getType() {
-        return type;
-    }
-
-    public void setType(Integer type) {
-        this.type = type;
-    }
 
     public String getDenomination() {
         return denomination;

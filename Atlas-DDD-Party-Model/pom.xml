@@ -11,5 +11,11 @@
 
     <artifactId>atlas-ddd-party-model</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>be.knoware</groupId>
+            <artifactId>atlas-ddd-communication-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

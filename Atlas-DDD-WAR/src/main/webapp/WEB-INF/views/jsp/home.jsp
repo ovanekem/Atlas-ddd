@@ -8,7 +8,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-<c:url var="home" value="/" scope="request" />
+<c:url var="home" value="/" scope="request"/>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -46,7 +46,8 @@
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" id="btn-add"
-                        class="btn btn-primary btn-lg">Add Party</button>
+                        class="btn btn-primary btn-lg">Add Party
+                </button>
             </div>
         </div>
     </form>
@@ -55,18 +56,19 @@
 <div id="feedback"></div>
 
 <div id="listParties" class="container">
-    <table id='parties' border="1" ></table></div>
+    <table id='parties' border="1"></table>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <script type="application/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
         $("#listParties").hide();
         $("#addPartyForm").hide();
 
-        $("#addPartyForm").submit(function(event) {
+        $("#addPartyForm").submit(function (event) {
             enableAddButton(false);
 
 
@@ -87,21 +89,21 @@
         party["denomination"] = $("#denomination").val();
 
         $.ajax({
-            type : "POST",
-            contentType : "application/json",
-            url : "party/add",
-            data : JSON.stringify(party),
-            dataType : 'json',
-            timeout : 100000,
-            success : function(data) {
+            type: "POST",
+            contentType: "application/json",
+            url: "party/add",
+            data: JSON.stringify(party),
+            dataType: 'json',
+            timeout: 100000,
+            success: function (data) {
                 console.log("SUCCESS: ", data);
                 display(data);
             },
-            error : function(e) {
+            error: function (e) {
                 console.log("ERROR: ", e);
                 display(e);
             },
-            done : function(e) {
+            done: function (e) {
                 console.log("DONE");
                 enableAddButton(true);
             }
@@ -119,21 +121,31 @@
         $("#parties tbody").remove();
 
         $.ajax({
-            type : "GET",
-            contentType : "application/json",
-            url : "party/list",
-            dataType : 'json',
-            timeout : 100000,
-            success : function(data) {
+            type: "GET",
+            contentType: "application/json",
+            url: "party/list",
+            dataType: 'json',
+            timeout: 100000,
+            success: function (data) {
                 console.log("SUCCESS: ", data);
                 for (var i = 0; i < data.length; i++) {
-                    $('#parties').append('<tr><td> ' + data[i].id + ' </td> <td> ' + data[i].denomination + ' </td></tr>');
+                    var id = data[i].id
+                    var denomination = data[i].denomination;
+                    communicationPoints = data[i].communicationPointList;
+                    for (var j = 0; j < communicationPoints.length; j++) {
+                        if (communicationPoints[j].domain != null) {
+                            denomination = denomination + ' (' + communicationPoints[j].address + '@' + communicationPoints[j].domain + ') ';
+                        } else {
+                            denomination = denomination + ' (' + communicationPoints[j].street + ',' + communicationPoints[j].houseNumber + '-' + communicationPoints[j].zip + ' ' + communicationPoints[j].city + ') ';
+                        }
+                    }
+                    $('#parties').append('<tr><td> ' + id + ' </td> <td> ' + denomination + '</td></tr>');
                 }
             },
-            error : function(e) {
+            error: function (e) {
                 console.log("ERROR: ", e);
             },
-            done : function(e) {
+            done: function (e) {
                 console.log("DONE");
             }
         });

@@ -3,12 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD.iml" filepath="$PROJECT_DIR$/Atlas-DDD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Communication-Model/Atlas-DDD-Communication-Model.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Communication-Model/Atlas-DDD-Communication-Model.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Docker/Atlas-DDD-Docker.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Docker/Atlas-DDD-Docker.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-EAR/Atlas-DDD-EAR.iml" filepath="$PROJECT_DIR$/Atlas-DDD-EAR/Atlas-DDD-EAR.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Other-EAR/Atlas-DDD-Other-EAR.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Other-EAR/Atlas-DDD-Other-EAR.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Other-WAR/Atlas-DDD-Other-WAR.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Other-WAR/Atlas-DDD-Other-WAR.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Party-Model/Atlas-DDD-Party-Model.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Party-Model/Atlas-DDD-Party-Model.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Party-Persist/Atlas-DDD-Party-Persist.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Party-Persist/Atlas-DDD-Party-Persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-Persist/Atlas-DDD-Persist.iml" filepath="$PROJECT_DIR$/Atlas-DDD-Persist/Atlas-DDD-Persist.iml" />
       <module fileurl="file://$PROJECT_DIR$/Atlas-DDD-WAR/Atlas-DDD-WAR.iml" filepath="$PROJECT_DIR$/Atlas-DDD-WAR/Atlas-DDD-WAR.iml" />
     </modules>
   </component>

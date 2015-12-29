@@ -22,7 +22,7 @@ public class PartyController {
     @RequestMapping(value = "/party/list", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Party> listAllParties() {
 
-        List<Party> parties = partyService.fetchAllPartyFromDatabase();
+        List<Party> parties = partyService.fetchAllPartiesFromDatabase();
         return parties;
 
     }

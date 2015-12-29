@@ -62,7 +62,12 @@
         </dependency>
         <dependency>
             <groupId>be.knoware</groupId>
-            <artifactId>atlas-ddd-party-persist</artifactId>
+            <artifactId>atlas-ddd-persist</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>be.knoware</groupId>
+            <artifactId>atlas-ddd-communication-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

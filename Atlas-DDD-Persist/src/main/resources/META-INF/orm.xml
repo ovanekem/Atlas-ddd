@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings
+        xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm
+        http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
+        version="2.0">
+
+
+    <description>ATLAS-JPS-Mappings</description>
+
+    <entity class="be.knoware.atlas.domain.party.Party" name="Party">
+        <table name="PartyTable"/>
+        <inheritance/>
+        <discriminator-column name="PARTY_TYPE"/>
+        <attributes>
+            <id name="id">
+                <column name="PARTY_ID"/>
+                <generated-value strategy="AUTO"/>
+            </id>
+            <basic name="denomination">
+                <column name="PARTY_DENOMINATION" length="100"/>
+            </basic>
+            <basic name="startDate">
+                <column name="PARTY_START_DATE"/>
+                <temporal>DATE</temporal>
+            </basic>
+            <basic name="endDate">
+                <column name="PARTY_END_DATE"/>
+                <temporal>DATE</temporal>
+            </basic>
+            <transient name="communicationPointList"/>
+
+        </attributes>
+    </entity>
+    <entity class="be.knoware.atlas.domain.party.Individual" name="Individual">
+        <discriminator-value>I</discriminator-value>
+        <attributes>
+
+            <basic name="firstName">
+                <column name="INDIVIDUAL_FIRST_NAME" length="100"/>
+            </basic>
+            <basic name="lastName">
+                <column name="INDIVIDUAL_LAST_NAME" length="100"/>
+            </basic>
+        </attributes>
+    </entity>
+    <entity class="be.knoware.atlas.domain.party.Organization" name="Organization">
+        <discriminator-value>O</discriminator-value>
+        <attributes>
+
+            <basic name="bceNumber">
+                <column name="ORGANIZATION_BCE" length="20"/>
+            </basic>
+
+        </attributes>
+    </entity>
+
+    <entity class="be.knoware.atlas.domain.communication.CommunicationPoint" name="CommunicationPoint">
+        <table name="CommunicationTable"/>
+        <inheritance/>
+        <discriminator-column name="COMMUNICATION_TYPE"/>
+        <attributes>
+            <id name="id">
+                <column name="COMMUNICATION_ID"/>
+                <generated-value strategy="AUTO"/>
+            </id>
+            <basic name="partyId">
+                <column name="PARTY_ID"/>
+            </basic>
+
+        </attributes>
+    </entity>
+    <entity class="be.knoware.atlas.domain.communication.Email" name="Email">
+        <discriminator-value>EMAIL</discriminator-value>
+        <attributes>
+
+            <basic name="addres">
+                <column name="EMAIL_ADDRESS" length="100"/>
+            </basic>
+            <basic name="domain">
+                <column name="EMAIL_DOMAIN" length="100"/>
+            </basic>
+        </attributes>
+    </entity>
+    <entity class="be.knoware.atlas.domain.communication.Address" name="Address">
+        <discriminator-value>ADDRESS</discriminator-value>
+        <attributes>
+
+            <basic name="street">
+                <column name="ADDRESS_STREET" length="100"/>
+            </basic>
+            <basic name="houseNumber">
+                <column name="ADDRESS_HOUSE_NUMBER" length="10"/>
+            </basic>
+            <basic name="zip">
+                <column name="ADDRESS_ZIP" length="6"/>
+            </basic>
+            <basic name="city">
+                <column name="ADDRESS_CITY" length="40"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
